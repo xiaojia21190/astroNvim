@@ -3,6 +3,7 @@ return {
   opt = {
     -- set to true or false etc.
     cmdheight = 1,
+    clipboard = "unnamedplus",
     foldlevelstart = 99,
     foldcolumn = "1",
     foldlevel = 99,

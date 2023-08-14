@@ -12,7 +12,7 @@ return {
   {
     "zbirenbaum/copilot.lua",
     cmd = "Copilot",
-    event = "User AstroFile",
+    lazy = false,
     opts = { suggestion = { auto_trigger = true, debounce = 150 } },
   },
   {

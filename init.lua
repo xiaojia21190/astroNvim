@@ -41,7 +41,7 @@ return {
       },
       disabled = { -- disable formatting capabilities for the listed language servers
         -- disable lua_ls formatting capability if you want to use StyLua to format your lua code
-        -- "lua_ls",
+        "lua_ls",
       },
       timeout_ms = 3200, -- default format timeout
       -- filter = function(client) -- fully override the default formatting function
@@ -82,15 +82,15 @@ return {
     --   },
     -- }
     vim.api.nvim_create_augroup("astronvim_intput", { clear = true })
-    vim.api.nvim_cmd({ "InsertLeave" }, {
+    vim.api.nvim_create_autocmd({ "InsertLeave" }, {
       desc = "InsertLeave",
       group = "astronvim_intput",
-      callback = function() vim.cmd ":silent :!~/.config/lua/user/im-select.exe 1033" end,
+      callback = function() vim.cmd ":silent :!~/.config/nvim/im-select.exe 1033" end,
     })
-    vim.api.nvim_cmd({ "InsertEnter" }, {
+    vim.api.nvim_create_autocmd({ "InsertEnter" }, {
       desc = "InsertEnter",
       group = "astronvim_intput",
-      callback = function() vim.cmd ":silent :!~/.config/lua/user/im-select.exe 2052" end,
+      callback = function() vim.cmd ":silent :!~/.config/nvim/im-select.exe 2052" end,
     })
   end,
 }
