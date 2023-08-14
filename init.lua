@@ -85,12 +85,12 @@ return {
     vim.api.nvim_create_autocmd({ "InsertLeave" }, {
       desc = "InsertLeave",
       group = "astronvim_intput",
-      callback = function() vim.cmd ":silent :!~/.config/nvim/im-select.exe 1033" end,
+      callback = function() vim.cmd ":silent :!~/.config/nvim/lua/user/im-select.exe 1033" end,
     })
     vim.api.nvim_create_autocmd({ "InsertEnter" }, {
       desc = "InsertEnter",
       group = "astronvim_intput",
-      callback = function() vim.cmd ":silent :!~/.config/nvim/im-select.exe 2052" end,
+      callback = function() vim.cmd ":silent :!~/.config/nvim/lua/user/im-select.exe 2052" end,
     })
   end,
 }
