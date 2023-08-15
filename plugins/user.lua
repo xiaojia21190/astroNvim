@@ -14,5 +14,4 @@ return {
     -- lazy-load on a command
     cmd = "StartupTime",
   },
-  { "ur4ltz/surround.nvim", event = "InsertEnter" },
 }

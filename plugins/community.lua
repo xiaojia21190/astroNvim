@@ -4,7 +4,6 @@ return {
   -- example of importing a plugin, comment out to use it or add your own
   -- available plugins can be found at https://github.com/AstroNvim/astrocommunity
 
-  { import = "astrocommunity.colorscheme.catppuccin" },
   { import = "astrocommunity.completion.copilot-lua-cmp" },
   { import = "astrocommunity.pack.html-css" },
   { import = "astrocommunity.pack.tailwindcss" },
@@ -16,4 +15,5 @@ return {
   { import = "astrocommunity.motion.leap-nvim" },
   { import = "astrocommunity.editing-support.nvim-regexplainer" },
   { import = "astrocommunity.editing-support.auto-save-nvim" },
+  { import = "astrocommunity.motion.nvim-surround" },
 }
