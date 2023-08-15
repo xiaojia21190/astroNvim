@@ -12,11 +12,11 @@ return {
     ["<S-l>"] = { "$", desc = "$" },
     ["="] = { "nzzzv", desc = "n" },
     ["<leader>tt"] = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", desc = "ToggleTerm horizontal split" },
-    ["<C-Right>"] = {
+    ["<A-Right>"] = {
       function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
       desc = "Next buffer",
     },
-    ["<C-Left>"] = {
+    ["<A-Left>"] = {
       function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
       desc = "Previous buffer",
     },
@@ -45,6 +45,11 @@ return {
       function() require("Comment.api").toggle.linewise.current() end,
       desc = "Comment line",
     },
+    ["gd"] = { "<cmd>lua vim.lsp.buf.definition()<CR>", desc = "Go to definition" },
+    ["gh"] = { "<cmd>lua vim.lsp.buf.hover()<CR>", desc = "Hover" },
+    ["gD"] = { "<cmd>lua vim.lsp.buf.declaration()<CR>", desc = "Go to declaration" },
+    ["gi"] = { "<cmd>lua vim.lsp.buf.implementation()<CR>", desc = "Go to implementation" },
+    ["gr"] = { "<cmd>lua vim.lsp.buf.references()<CR>", desc = "Go to references" },
   },
   v = {
     ["<C-_>"] = {
