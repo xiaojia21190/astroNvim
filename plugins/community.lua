@@ -12,6 +12,7 @@ return {
   { import = "astrocommunity.pack.bash" },
   { import = "astrocommunity.pack.astro" },
   { import = "astrocommunity.pack.lua" },
+  { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.motion.leap-nvim" },
   { import = "astrocommunity.editing-support.nvim-regexplainer" },
   { import = "astrocommunity.editing-support.auto-save-nvim" },
