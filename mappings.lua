@@ -39,8 +39,8 @@ return {
       function() require("telescope.builtin").find_files { no_ignore = true } end,
       desc = "Search all files",
     },
-    ["<C-Up>"] = { "8gk", desc = "up 8" },
-    ["<C-Down>"] = { "8gj", desc = "down 8" },
+    ["<C-Up>"] = { "12gk", desc = "up 12" },
+    ["<C-Down>"] = { "12gj", desc = "down 12" },
     ["<C-_>"] = {
       function() require("Comment.api").toggle.linewise.current() end,
       desc = "Comment line",
