@@ -39,6 +39,7 @@ return {
       function() require("telescope.builtin").find_files { no_ignore = true } end,
       desc = "Search all files",
     },
+    ["<C-z>"] = { "u", desc = "undo" },
     ["<C-Up>"] = { "12gk", desc = "up 12" },
     ["<C-Down>"] = { "12gj", desc = "down 12" },
     ["<C-_>"] = {
