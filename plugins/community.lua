@@ -8,6 +8,7 @@ return {
   { import = "astrocommunity.pack.html-css" },
   { import = "astrocommunity.pack.tailwindcss" },
   { import = "astrocommunity.pack.typescript" },
+  { import = "astrocommunity.pack.python" },
   { import = "astrocommunity.pack.vue" },
   { import = "astrocommunity.pack.bash" },
   { import = "astrocommunity.pack.astro" },
