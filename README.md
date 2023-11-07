@@ -37,7 +37,8 @@ curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
 ## zsh 
 https://juejin.cn/post/7064161133996802061
 
-
+##fzf错误
+cd ~/.local/share/nvim/lazy/telescope-fzf-native.nvim && make && cd -
 
 
 # AstroNvim User Configuration Example
