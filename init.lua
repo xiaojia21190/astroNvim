@@ -85,12 +85,24 @@ return {
     vim.api.nvim_create_autocmd({ "InsertLeave" }, {
       desc = "InsertLeave",
       group = "astronvim_intput",
-      callback = function() vim.cmd ":silent :!~/.config/nvim/lua/user/im-select.exe 1033" end,
+      callback = function()
+        if vim.fn.has "win32" == 0  then
+          vim.cmd ":silent :!~/.config/nvim/lua/user/im-select.exe 1033"
+        else
+          vim.cmd ":silent :!C:/Users/lenovo/AppData/Local/nvim/lua/user/im-select.exe 1033"
+        end
+      end
     })
     vim.api.nvim_create_autocmd({ "InsertEnter" }, {
       desc = "InsertEnter",
       group = "astronvim_intput",
-      callback = function() vim.cmd ":silent :!~/.config/nvim/lua/user/im-select.exe 2052" end,
+      callback = function()
+        if vim.fn.has "win32" == 0  then
+          vim.cmd ":silent :!~/.config/nvim/lua/user/im-select.exe 2052"
+        else
+          vim.cmd ":silent :!C:/Users/lenovo/AppData/Local/nvim/lua/user/im-select.exe 2052" 
+        end
+      end
     })
   end,
 }
