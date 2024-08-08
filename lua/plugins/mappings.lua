@@ -13,16 +13,16 @@ return {
           ["="] = { "nzzzv", desc = "n" },
           ["<leader>tt"] = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", desc = "ToggleTerm horizontal split" },
           ["<A-Right>"] = {
-            function() require("astronvim.utils.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
+            function() require("astrocore.buffer").nav(vim.v.count > 0 and vim.v.count or 1) end,
             desc = "Next buffer",
           },
           ["<A-Left>"] = {
-            function() require("astronvim.utils.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
+            function() require("astrocore.buffer").nav(-(vim.v.count > 0 and vim.v.count or 1)) end,
             desc = "Previous buffer",
           },
           ["<A-1>"] = { "<cmd>Neotree focus<cr>", desc = "Focus Explorer" },
           ["<leader><CR>"] = { "<cmd>nohlsearch<cr>", desc = "No Highlight" },
-          ["<leader>q"] = { function() require("astronvim.utils.buffer").close() end, desc = "Close buffer" },
+          ["<leader>q"] = { function() require("astrocore.buffer").close() end, desc = "Close buffer" },
           ["<CS-f>"] = {
             function()
               require("telescope.builtin").live_grep {
