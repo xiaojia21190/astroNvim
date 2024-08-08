@@ -108,44 +108,28 @@ return {
     -- lazy-load on a command
     cmd = "StartupTime",
   },
-  {
-    "nvim-telescope/telescope.nvim",
-    dependencies = {
-      { "nvim-telescope/telescope-fzf-native.nvim", enabled = vim.fn.executable "make" == 1, build = "make" },
-    },
-    cmd = "Telescope",
-    opts = function()
-      local actions = require "telescope.actions"
-      local get_icon = require("astronvim.utils").get_icon
-      return {
-        defaults = {
-          git_worktrees = vim.g.git_worktrees,
-          prompt_prefix = get_icon("Selected", 1),
-          selection_caret = get_icon("Selected", 1),
-          path_display = { "truncate" },
-          file_ignore_patterns = { "node_modules" },
-          sorting_strategy = "ascending",
-          layout_config = {
-            horizontal = { prompt_position = "top", preview_width = 0.55 },
-            vertical = { mirror = false },
-            width = 0.87,
-            height = 0.80,
-            preview_cutoff = 120,
-          },
+    {
+    "nvim-neo-tree/neo-tree.nvim",
+    config = function()
+      require("neo-tree").setup {
+        window = {
           mappings = {
-            i = {
-              ["<C-n>"] = actions.cycle_history_next,
-              ["<C-p>"] = actions.cycle_history_prev,
-              ["<C-j>"] = actions.move_selection_next,
-              ["<C-k>"] = actions.move_selection_previous,
+            ["o"] = "add_directory",
+            ["i"] = {
+              "add",
+              -- this command supports BASH style brace expansion ("x{a,b,c}" -> xa,xb,xc). see `:h neo-tree-file-actions` for details
+              -- some commands may take optional config options, see `:h neo-tree-mappings` for details
+              config = {
+                show_path = "none", -- "none", "relative", "absolute"
+              },
             },
-            n = { q = actions.close },
+            ["a"] = "rename",
           },
         },
       }
     end,
-    config = require "plugins.configs.telescope",
   },
+
   {
     "jay-babu/mason-null-ls.nvim",
 
