@@ -1,51 +1,8 @@
-##
+# AstroNvim Template
 
-首先，在windows盘里下载tar.gz文件，可以使用wget https://github.com/neovim/neovim/releases/download/nightly/nvim-linux64.tar.gz 地址来进行下载
+**NOTE:** This is for AstroNvim v4+
 
-然后在wsl中cd到这个目录，不如cd /mn/d/Ubuntu
-
-然后解压缩>tar xzvf nvim-linux64.tar.gz
-
-然后到解压后的目录里运行nvim
-
->./nvim-linux64/bin/nvim
-
-版本号0.10
-
-然后把这个文件夹复制到
-
-$ sudo cp ./nvim-linux64/bin/nvim /usr/bin/nvim
-
-$sudo cp -r nvim-linux64/share/nvim/runtime /usr/share/nvim/runtime/
-
-## No C compiler found! "cc", "gcc", "clang", "cl", "zig" are not executable.  
-sudo apt-get install build-essential
-
-## ripgrep
-sudo apt-get install ripgrep
-
-## lazygit
-```bash
-LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
-curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
-tar xf lazygit.tar.gz lazygit
-sudo install lazygit /usr/local/bin
-```
-
-## nvm
-curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
-
-
-## zsh 
-https://juejin.cn/post/7064161133996802061
-
-##fzf错误
-cd ~/.local/share/nvim/lazy/telescope-fzf-native.nvim && make && cd -
-
-
-# AstroNvim User Configuration Example
-
-A user configuration template for [AstroNvim](https://github.com/AstroNvim/AstroNvim)
+A template for getting started with [AstroNvim](https://github.com/AstroNvim/AstroNvim)
 
 ## 🛠️ Installation
 
@@ -54,12 +11,8 @@ A user configuration template for [AstroNvim](https://github.com/AstroNvim/Astro
 ```shell
 mv ~/.config/nvim ~/.config/nvim.bak
 mv ~/.local/share/nvim ~/.local/share/nvim.bak
-```
-
-#### Clone AstroNvim
-
-```shell
-git clone https://github.com/AstroNvim/AstroNvim ~/.config/nvim
+mv ~/.local/state/nvim ~/.local/state/nvim.bak
+mv ~/.cache/nvim ~/.cache/nvim.bak
 ```
 
 #### Create a new user repository from this template
@@ -71,7 +24,7 @@ You can also just clone this repository directly if you do not want to track you
 #### Clone the repository
 
 ```shell
-git clone https://github.com/<your_user>/<your_repository> ~/.config/nvim/lua/user
+git clone https://github.com/<your_user>/<your_repository> ~/.config/nvim
 ```
 
 #### Start Neovim
